@@ -1,6 +1,8 @@
 $name$
 -----
 
+$desc$
+
 Build and run via:
 ```console
 sbt javah assembly
