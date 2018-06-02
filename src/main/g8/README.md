@@ -6,7 +6,7 @@ $desc$
 Build and run via:
 ```console
 sbt javah assembly
-java -jar target/scala-2.12/$name;format="Camel"$-assembly-1.0.jar
+java -jar target/scala-2.12/$name;format="Camel"$.jar
 ```
 
   * scala app built in the root project
