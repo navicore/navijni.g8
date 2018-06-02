@@ -5,7 +5,7 @@ $desc$
 
 Build and run via:
 ```console
-sbt javah assembly
+sbt assembly
 java -jar target/scala-2.12/$name;format="Camel"$.jar
 ```
 

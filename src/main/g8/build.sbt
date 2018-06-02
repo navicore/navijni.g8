@@ -18,3 +18,5 @@ lazy val native = (project in file("native")).
 mainClass in assembly := Some("$package$.Main")
 assemblyJarName in assembly := "$name;format="Camel"$.jar"
 
+(Test / test) := ((Test / test) dependsOn javah).value
+

@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/navicore/navijni.g8.svg?branch=master)](https://travis-ci.org/navicore/navijni.g8)
+
 a [g8] template for a jni + scala project
 ---
 
