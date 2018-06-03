@@ -57,6 +57,7 @@ TODO:
 * `test`, `run`, `assembly` should automatically `javah`
 * cross compiling (Raspberry PI, MacOS, Intel Linux, etc...)
 * a compilation database automatically generated (via bear / Build EAR?)
+* document publishing the lib to maven
 
 [giter8]: http://www.foundweekends.org/giter8/
 [sbt-jni]: https://github.com/jodersky/sbt-jni
