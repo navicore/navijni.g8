@@ -49,8 +49,8 @@ java -jar target/scala-2.12/<YOUR PROJECT NAME>.jar
 
 ----
 TODO:
-* make `javah` a dependency for `test`, `run`, `assembly`
-* would like cross compiling (Raspberry PI, MacOS, Intel Linux, etc...)
+* `test`, `run`, `assembly` should automatically `javah`
+* cross compiling (Raspberry PI, MacOS, Intel Linux, etc...)
 * a compilation database automatically generated (via bear / Build EAR?)
 
 [giter8]: http://www.foundweekends.org/giter8/
