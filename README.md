@@ -4,6 +4,8 @@
 a [g8] template for a jni + scala project
 ---
 
+## USAGE
+
 ```console
 sbt new navicore/navijni.g8
 ```
@@ -14,18 +16,41 @@ The resulting generated project is a:
 * cpp native lib built in a sub-project dependency
 * root project superjar via JniPackage and assembly plugin containing the native shared libs - ready to run
 
-To build and run the generated project, cd into the newly created project dir and:
+## USAGE
+
+### Generate Your Project
+
+```console
+sbt new navicore/navijni.g8
+```
+
+### Build and run the generated project
+
+cd into the newly created project dir and:
 
 ```console
 sbt javah run
 ```
 
-or for a deployable superjar:
+### Deploy the generated project
 
 ```console
 sbt javah assembly
+```
+* copy the superjar from `target/scala-2.12/` to your installation
+* run via:
+
+```console
 java -jar target/scala-2.12/<YOUR PROJECT NAME>.jar
 ```
+
+# FURTHER DEVELOPMENT OF YOUR PROJECT
+
+1. edit your generated Scala native wrapper found in `src/main/scala` by adding, changing, deleting native methods
+2. rerun `sbt javah`
+3. use the updated header file found in `target/native/include/` to implement the native functions in the native module in `native/src`
+4. `sbt javah run` to test
+5. `sbt javah assembly` to create superjar
 
 ----
 TODO:
