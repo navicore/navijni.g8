@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/navicore/navijni.g8.svg?branch=master)](https://travis-ci.org/navicore/navijni.g8)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f90755fbfaf0423099410e50dff694f7)](https://www.codacy.com/app/navicore/navijni.g8?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=navicore/navijni.g8&amp;utm_campaign=Badge_Grade)
 
-a [g8] template for a jni + scala project
+a [giter8] template for a jni + scala project based on [sbt-jni]
 ---
 
 ## USAGE
@@ -46,11 +46,12 @@ java -jar target/scala-2.12/<YOUR PROJECT NAME>.jar
 
 # FURTHER DEVELOPMENT OF YOUR PROJECT
 
-1. edit your generated Scala native wrapper found in `src/main/scala` by adding, changing, deleting native methods
-2. rerun `sbt javah`
-3. use the updated header file found in `target/native/include/` to implement the native functions in the native module in `native/src`
-4. `sbt javah run` to test
-5. `sbt javah assembly` to create superjar
+1. edit your generated Scala native wrapper found in `src/main/scala`, adding, changing, and deleting native methods
+1. rerun `sbt javah`
+1. edit the native module in `native/src` and implement the functions from the newly updated header file found in `target/native/include/`
+1. `sbt javah test`
+1. `sbt javah run`
+1. `sbt javah assembly` to create superjar
 
 ----
 TODO:
@@ -58,4 +59,4 @@ TODO:
 * a compilation database automatically generated (via bear / Build EAR?)
 
 [g8]: http://www.foundweekends.org/giter8/
-
+[sbt-jni]: https://github.com/jodersky/sbt-jni
