@@ -4,17 +4,11 @@
 a [giter8] template for a jni + scala project based on [sbt-jni]
 ---
 
-## USAGE
+Generate projects that have:
 
-```console
-sbt new navicore/navijni.g8
-```
-
-The resulting generated project is a:
-
-* scala app built in the root project
-* cpp native lib built in a sub-project dependency
-* root project superjar via JniPackage and assembly plugin containing the native shared libs - ready to run
+* a scala app built in the root project
+* a cpp native lib built in a sub-project dependency
+* a superjar containing the native shared libs - ready to run
 
 ## USAGE
 
