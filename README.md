@@ -43,6 +43,11 @@ java -jar target/scala-2.12/<YOUR PROJECT NAME>.jar
 1. edit your generated Scala native wrapper found in `src/main/scala`, adding, changing, and deleting native methods
 1. rerun `sbt javah`
 1. edit the native module in `native/src` and implement the functions from the newly updated header file found in `target/native/include/`
+1. edit `native/src/` adding external native libs that need linking, ie add the following after add_library if you are linking libwiringPi:
+    ```
+    find_library(wiringPi_LIB wiringPi)
+    target_link_libraries(${LIB_NAME} ${wiringPi_LIB})
+    ```
 1. `sbt javah test`
 1. `sbt javah run`
 1. `sbt javah assembly` to create superjar
