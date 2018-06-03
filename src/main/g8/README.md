@@ -17,7 +17,7 @@ java -jar target/scala-2.12/$name;format="Camel"$.jar
 
 1. edit the generated Scala native wrapper `$nativeModuleName$.scala`, adding, changing, and deleting native methods
 1. rerun `sbt javah`
-1. edit the native module `native/src/$nativeModuleName$.cpp` and implement the functions from the newly updated header file found in `target/native/include/`
+1. edit the native module `native/src/$nativeModuleName$.cpp` and implement the functions from the `javah` generated header file found in `target/native/include/`
 1. edit `native/src/CMakeLists.txt` adding external native libs that need linking, ie add the following after add_library if you are linking libwiringPi:
     ```
     find_library(wiringPi_LIB wiringPi)
